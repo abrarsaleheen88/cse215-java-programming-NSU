@@ -1,0 +1,66 @@
+/** Suppose that the tuition for a university is $10,000 this year and tuition increases 7% every
+year. In how many years will the tuition be doubled?
+Before you can write a program to solve this problem, first consider how to solve it by
+hand. The tuition for the second year is the tuition for the first year * 1.07. The tuition for a
+future year is the tuition of its preceding year * 1.07. Thus, the tuition for each year can be
+computed as follows:
+double tuition = 10000; int year = 0; // Year 0
+tuition = tuition * 1.07; year++; // Year 1
+tuition = tuition * 1.07; year++; // Year 2
+tuition = tuition * 1.07; year++; // Year 3
+...
+Keep computing the tuition for a new year until it is at least 20000. By then you will know
+how many years it will take for the tuition to be doubled. You can now translate the logic into
+the following loop:
+double tuition = 10000; // Year 0
+int year = 0;
+while (tuition < 20000) {
+ tuition = tuition * 1.07;
+ year++;
+}
+The complete program is shown in Listing 5.10.
+
+
+*/
+
+
+
+// Online Java Compiler (Editor)
+// Write and run Java online using this editor.
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+
+        
+    Scanner s = new Scanner(System.in);
+        System.out.println("Enter rate = ");
+
+        int r = s.nextInt();
+            double pctRate = ((double)r/100);
+
+        double total = 10000.00;
+        int year = 0;
+
+        while ( true)
+            {
+
+                if (total >= 20000.00)
+                {
+                    break;
+                }
+
+                else
+                {
+                    total = total +total * pctRate;
+                }
+
+                year++;
+            }
+        
+
+        
+
+        System.out.println("year= "+ year);
+        
+    }
+}
