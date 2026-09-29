@@ -1,0 +1,32 @@
+// Online Java Compiler (Editor)
+// Write and run Java online using this editor.
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+
+        
+    Scanner s = new Scanner(System.in);
+        System.out.println("Enter n1 = ");
+        int a = s.nextInt();
+          System.out.println("Enter n2 = ");
+        int b = s.nextInt();
+
+        
+        
+                   int gcd =0 ;
+        for (int i = 2 ;i <= a/2 && i <= b/2;i++)// counting factors - factors must be greater than 1 and less than both the half of n1 and n2
+            {
+                   if ( a % i == 0 && b % i == 0) // if the factor is both divisible by i 
+                   {
+                       gcd = i;// stores i as gcd as i is the latest largest value 
+                   }
+                
+            }
+
+      
+       
+
+        System.out.println("GCD = "+ gcd);
+        
+    }
+}
