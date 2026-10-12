@@ -1,0 +1,49 @@
+
+package com.mycompany.lec4;
+import java.util.Scanner;
+
+public class Lec4 {
+
+    
+    public static  int welcome( int start,int end)
+    {
+        
+        int o = 0;
+        int e = 0;
+      
+        for (int i= start;i<=end;i++)
+        {
+           if  (i %2 != 0)
+           {
+              o++;
+              System.out.println(i);
+           }
+           
+        
+        }
+    
+        
+         return o;
+         
+         
+    }
+    
+    
+    
+    
+    public static void main(String[] args)
+    {
+        Scanner s = new Scanner(System.in);
+       System.out.println(" start");
+        int start = s.nextInt();
+        
+        
+         System.out.println(" end");
+        int end = s.nextInt();
+        
+       int x =  welcome(start,end);
+       
+        
+        System.out.println(x);
+    }
+}
