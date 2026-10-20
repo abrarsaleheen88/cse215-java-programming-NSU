@@ -1,0 +1,67 @@
+/*
+(Find the two highest scores) Write a program that prompts the user to enter the
+number of students and each student’s name and score, and finally displays the
+student with the highest score and the student with the second-highest score.
+*/
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+
+        Scanner s = new Scanner(System.in);
+
+        System.out.print("Enter the total students = ");
+        int n = s.nextInt();
+
+        // Store the highest and second-highest scores.
+        int firstnum = Integer.MIN_VALUE;
+        int secondnum = Integer.MIN_VALUE;
+
+        // Store the names of those two students.
+        String firstname = "";
+        String secondname = "";
+
+        // Process each student exactly once.
+        for (int i = 0; i < n; i++) {
+
+            System.out.print("Enter the student name = ");
+            String name = s.next();
+
+            System.out.print("Enter the score of the student = ");
+            int number = s.nextInt();
+
+            // If this student has the highest score so far...
+            if (number > firstnum) {
+
+                // The old highest student moves to second place.
+                secondnum = firstnum;
+                secondname = firstname;
+
+                // The new student becomes the highest scorer.
+                firstnum = number;
+                firstname = name;
+            }
+
+            // Otherwise, check whether this student ranks second.
+            else if (number > secondnum) {
+
+                // Update the second-highest student's information.
+                secondnum = number;
+                secondname = name;
+            }
+        }
+
+        // Display the two highest scorers.
+        if (n >= 2) {
+            System.out.println("First name = " + firstname
+                    + ", score = " + firstnum);
+
+            System.out.println("Second name = " + secondname
+                    + ", score = " + secondnum);
+        } else {
+            System.out.println("Enter at least two students.");
+        }
+
+        s.close();
+    }
+}
