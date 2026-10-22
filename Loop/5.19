@@ -1,0 +1,65 @@
+/***5.19 (Display numbers in a pyramid pattern)** Write a nested for loop that prints the following output:
+
+---
+
+```text
+               1
+            1  2  1
+         1  2  4  2  1
+      1  2  4  8  4  2  1
+   1  2  4  8 16  8  4  2  1
+1  2  4  8 16 32 16  8  4  2  1
+
+```
+
+*/
+
+
+// Online Java Compiler (Editor)
+// Write and run Java online using this editor.
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+
+        for (int i=1;i<=n;i++)
+            {
+                int space  = n-i;
+
+                for (int j=1;j<=space;j++)
+                    {
+                        System.out.print(" ");
+                    }
+
+                int mul =1;
+                 
+                for (int j =1;j<=i;j++)
+                    {
+                        
+                        
+                        System.out.print(mul);
+                           mul = mul*2;
+
+                        
+                        
+                    }
+
+                  mul = mul/4;
+                 for (int j =1;j<=i-1;j++)
+                    {
+                        
+                       
+                        System.out.print(mul);
+                         
+                             mul = mul/2;
+                        
+                        
+                    }
+
+                
+          
+                System.out.println();
+            }
+    }
+}
