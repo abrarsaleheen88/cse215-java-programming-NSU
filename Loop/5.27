@@ -1,0 +1,43 @@
+/*
+(Display leap years) Write a program that displays all the leap years, ten per line,
+from 101 to 2100, separated by exactly one space. Also display the number of
+leap years in this period.
+*/
+// Online Java Compiler (Editor)
+// Write and run Java online using this editor.
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args)
+    {
+        Scanner s = new Scanner(System.in);
+int total = 0;
+  int count = 0;     
+        for (int i = 101;i<=2100; i++)
+            {
+               
+            
+                if ((i % 4 ==0  && i % 100 != 0) || i % 400 ==0)
+                {
+                   System.out.print(i +" ");
+                       count++;
+                       total ++;
+                    
+                    if ( count % 10 ==0)
+                   {
+                       System.out.println();
+                      
+                   }
+                    else
+                   {
+                       System.out.print(" ");
+                   }
+                }
+
+
+            }
+
+                       System.out.print("Total Prints = "+ total);
+        
+       
+    }
+}
