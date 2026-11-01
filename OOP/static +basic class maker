@@ -1,0 +1,92 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.practice;
+
+/**
+ *
+ * @author Asus
+ */
+public class Practice {
+
+    public static void main(String[] args) {
+       Employee e1 = new Employee("ABrar",100000.00);
+       e1.display();
+    }
+}
+
+
+class Employee
+{
+
+      private String name;
+      private double salary;
+      private static int count = 0;
+      public static final String ins= "NSU";
+      
+     Employee (String n, double s )
+     {
+         this.name = n;
+         this.salary = s;
+         count ++;
+     
+     
+     }
+     
+     void display()
+     {
+     
+          System.out.println("Name = " + name);
+           System.out.println("salary= " + salary);
+            System.out.println(" Organisation= " + ins ); 
+             System.out.println(" total= " + count );
+     }
+
+}
+
+
+
+question
+
+চলো, এবার একটা lab-quiz-style problem করি। তোমার শেখা Constructor + Instance Variable + Static Variable + Static Method + Display Method সব থাকবে।
+
+## Problem: Employee Management
+
+একটি `Employee` class তৈরি করো।
+
+Requirements:
+
+1. `name` নামে একটি private String variable থাকবে।
+2. `salary` নামে একটি private double variable থাকবে।
+3. `count` নামে একটি static int variable থাকবে, initial value 0।
+4. `ORGANIZATION` নামে একটি `public static final` constant থাকবে, value `"NSU"`।
+5. একটি parameterized constructor থাকবে, যা name ও salary initialize করবে এবং count 1 বাড়াবে।
+6. `display()` method employee-এর name, salary ও organization print করবে।
+7. `getCount()` নামে একটি static method total employee count return করবে।
+
+Driver class-এ:
+
+- ২টি Employee object তৈরি করবে:
+  - Tamim, salary 30000
+  - Nadia, salary 40000
+- দুজনের information display করবে।
+- Total employee count print করবে।
+
+### Expected output
+
+```
+Name: Tamim
+Salary: 30000.0
+Organization: NSU
+
+Name: Nadia
+Salary: 40000.0
+Organization: NSU
+
+Total Employees: 2
+```
+
+তোমার task: নিজে code লিখবে। এখনই solution দিচ্ছি না।
+
+একটা hint: `count++` কোথায় বসবে, সেটা ভেবে দেখো—প্রতিটি নতুন Employee তৈরি হলে যেন একবার করে বাড়ে।
