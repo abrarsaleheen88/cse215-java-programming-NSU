@@ -1,0 +1,176 @@
+// Online Java Compiler (Editor)
+// Write and run Java online using this editor.
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args)
+    {  
+            Scanner s = new Scanner(System.in);
+ BankAccount [] a = new BankAccount[3];
+            for (int i = 0;i<3;i++)
+                    {
+
+                            
+
+          System.out.println("Enter Account Holders Name = ");
+                  String name  = s.next();
+            
+
+          System.out.println("Enter Account Holders Number = ");
+                  int num  = s.nextInt();
+            
+
+ System.out.println("Enter Account Holders Balance = ");
+                  double  balance = s.nextDouble();
+           a[i] = new BankAccount(name,num,balance);
+                        
+                    }
+
+            
+     a[1].setBalance (500000.00);
+            
+            for (int i = 0;i<3;i++)
+                    {
+                          a[i].displayInfo();
+                          
+                            
+                    }
+            BankAccount.showAccounts();
+    }
+}
+
+class BankAccount
+
+    {
+        private String accountHolder;
+        private int accountNumber;
+        private double balance;
+
+        private static int totalAccount  = 0;
+        public static final String bankName = "AB BANK";
+
+        BankAccount (String h,int n,double b)
+        {
+                   this.setHolder(h);
+                this.setAccountNumber(n);
+                this.setBalance(b);
+                totalAccount++;
+            
+        }
+
+           public String  getHolder()
+        {
+            return accountHolder;
+        }
+
+       public void  setHolder(String h)
+        {
+           this.accountHolder =h ;
+        }
+
+             public int  getAccountNumber()
+        {
+            return accountNumber;
+        }
+
+       public void  setAccountNumber(int n)
+        {
+           this.accountNumber = n ;
+        }
+
+             public  double  getBalance()
+        {
+            return balance;
+        }
+
+       public void  setBalance(double b)
+        {
+           this.balance =b;
+        }
+        
+        public void displayInfo()
+            {
+
+ System.out.println("Holder =" + accountHolder);    
+System.out.println("Acount num =" + accountNumber);    
+ System.out.println("Balance =" + balance);     
+            }
+            public static void showAccounts()
+            {
+                System.out.println("Total account=" + totalAccount );         
+            }
+    }
+
+
+
+
+
+
+
+
+Let's move one level up. এবার একটু different scenario, but আগের concepts-গুলোই combine করবে।
+
+## Practice Problem 3: Bank Account Management
+
+Create a Java program using OOP.
+
+Class: `BankAccount`
+
+Requirements:
+
+1\. Private variables:
+
+- `String accountHolder`
+- `int accountNumber`
+- `double balance`
+
+2\. Static variable:
+
+- `int totalAccounts = 0`
+
+3\. Static final variable:
+
+- `String BANK_NAME = "NSU Bank"`
+
+4\. Constructor:
+
+- Initialize all three instance variables.
+- Increment `totalAccounts`.
+
+5\. Getters:
+
+- `getAccountHolder()`
+- `getAccountNumber()`
+- `getBalance()`
+
+6\. Setters:
+
+- `setAccountHolder()`
+- `setBalance()`
+
+7\. Other methods:
+
+- `displayInfo()`
+- `static getTotalAccounts()`
+
+Main method requirements:
+
+- Create an array of 3 BankAccount objects.
+- Take input for all three accounts using a loop.
+- Change the second account's balance to `50000` using a setter.
+- Display all account information.
+- Print the total number of accounts using the static getter.
+
+### Rules
+
+- Don't copy your previous Student code blindly.
+- Use `students.length` equivalent for your array.
+- No need to use inheritance yet.
+
+Your task: Write the complete code yourself. Send me your attempt, and I'll check it like a CSE215 lab quiz—compiler errors, logic errors, and missing requirements.
+
+
+
+
+
+
+    
