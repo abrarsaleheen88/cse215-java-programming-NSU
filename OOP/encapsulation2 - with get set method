@@ -1,0 +1,163 @@
+// Online Java Compiler (Editor)
+// Write and run Java online using this editor.
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args)
+    {
+         Scanner s = new Scanner(System.in);
+
+       Student [] students = new Student[3];
+
+        for (int i = 0;i<3;i++)
+            {
+                 System.out.println("Name = ");
+                String name = s.next();
+
+                 System.out.println("ID = ");
+                int ID = s.nextInt();
+
+                 System.out.println("CGPA = ");
+                double cgpa = s.nextDouble();
+
+                   students[i] = new Student(name,ID,cgpa);
+                
+                     
+            }
+
+         for (int i = 0;i<3;i++)
+            {
+                 
+                 students[i].display();
+                
+                
+                     
+            }
+
+    System.out.println("Total: " + Student.getStudentCount());
+    }
+}
+
+class Student
+
+    {
+
+        private String name;
+        private int id;
+        private double cgpa;
+        private static int count = 0;
+        public static final String  org = "NSU";
+
+        Student (String n,int i,double c)
+            {
+              this.setName(n);
+               this.setId(i);
+               this.setCg (c);
+            count++;
+            }
+        
+           public String getName()
+               {
+               return name;
+               }
+
+          public void setName(String n)
+               {
+               this.name = n;
+               }
+
+        public int getId()
+               {
+               return id;
+               }
+
+          public void setId(int i)
+               {
+               this.id = i;
+               }
+
+           public double getCgpa()
+               {
+               return cgpa;
+               }
+
+          public void setCg(double c)
+               {
+               this.cgpa = c;
+               }
+
+void display()
+    {
+
+             System.out.println ("Name "+name );
+             System.out.println ("ID "+id );
+             System.out.println ("cgpa "+cgpa );
+                System.out.println ("org "+org);
+             
+
+    
+    }
+
+public static int getStudentCount ()
+    {
+           return count;
+    }
+        
+    }
+
+
+
+
+question 
+
+চলো, এবার এমন একটা problem দিচ্ছি যেখানে Encapsulation + Static + Constructor + Getter/Setter সব practice হবে।
+
+## Problem: Student Management System
+
+একটি `Student` class তৈরি করো।
+
+Requirements:
+
+1. `name` — private String variable।
+2. `id` — private int variable।
+3. `cgpa` — private double variable।
+4. `studentCount` — static int variable, initial value 0।
+5. `UNIVERSITY` — public static final String, value `"NSU"`।
+
+Methods:
+
+6. Parameterized constructor দিয়ে name, id, cgpa initialize করবে এবং `studentCount` বাড়াবে।
+7. `getName()`, `getId()`, `getCgpa()` — তিনটি getter তৈরি করবে।
+8. `setCgpa()` — CGPA update করার setter তৈরি করবে।
+9. `displayInfo()` — student's information দেখাবে।
+10. `getStudentCount()` — static method, total student count return করবে।
+
+Main method:
+
+- Rahim, ID 101, CGPA 3.50 দিয়ে object তৈরি করো।
+- Nadia, ID 102, CGPA 3.80 দিয়ে object তৈরি করো।
+- Nadia-এর CGPA setter দিয়ে 3.90 করো।
+- দুজনের information display করো।
+- Total student count দেখাও।
+
+Expected output
+
+```
+Name: Rahim
+ID: 101
+CGPA: 3.5
+University: NSU
+
+Name: Nadia
+ID: 102
+CGPA: 3.9
+University: NSU
+
+Total Students: 2
+```
+
+একটা hint: Getter data return করে, Setter data পরিবর্তন করে। `studentCount++` constructor-এর মধ্যে থাকবে।
+
+নিজে code লেখো। আটকে গেলে পুরো solution না দিয়ে ছোট hint দেব।
+
+
+questio
