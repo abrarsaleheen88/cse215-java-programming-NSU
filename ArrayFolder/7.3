@@ -1,0 +1,65 @@
+3 (Count occurrence of numbers) Write a program that reads the integers between 1
+and 100 and counts the occurrences of each. Assume the input ends with 0. Here
+is a sample run of the program:
+Programming Exercises 277
+Enter the integers between 1 and 100: 2 5 6 5 4 3 23 43 2 0
+2 occurs 2 times
+3 occurs 1 time
+4 occurs 1 time
+5 occurs 2 times
+6 occurs 1 time
+23 occurs 1 time
+43 occurs 1 time
+
+
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+
+        Scanner s = new Scanner(System.in);
+        int[] n = new int[101];
+        int size = 0;
+
+        //input
+        for (int i = 0; i < 101; i++) {
+            n[i] = s.nextInt();
+
+            //if its 0 input then break
+            if (n[i] == 0) {
+                break;
+            }
+
+            size++;
+        }
+
+        //for counting
+        for (int i = 0; i < size; i++) {
+            int count = 0;
+            int take = n[i];
+
+            boolean alreadycounted = false;
+//checks if its counted or not
+            for (int k = 0; k < i; k++) {
+                if (take == n[k]) {
+                    alreadycounted = true;
+                    break;
+                }
+            }
+//if counted then skip
+            if (alreadycounted == true) {
+                continue;
+            }
+
+            //counting part
+            for (int j = 0; j < size; j++) {
+                if (take == n[j]) {
+                    count++;
+                }
+            }
+
+            System.out.println(take + " occurs " + count + " times");
+        }
+    }
+}
