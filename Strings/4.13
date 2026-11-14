@@ -1,0 +1,39 @@
+// Online Java Compiler (Editor)
+// Write and run Java online using this editor.
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        System.out.println("vouwel or consonant.");
+        Scanner s= new Scanner(System.in);
+
+        char i = s.next().charAt(0);
+
+        if (Character.isLowerCase(i))
+        {   // changing the char case
+            i=Character.toUpperCase(i);
+        }
+//matching
+        if(i == 'A' || i=='E' || i=='I' || i =='O'|| i =='U')
+        {
+
+            System.out.println("Vowel");
+        }
+
+        else 
+        {
+            System.out.println("consonant");
+          
+            
+        }
+
+        
+      
+
+        
+        
+    }
+}
+
+(Vowel or consonant?) Write a program that prompts the user to enter a letter and
+check whether the letter is a vowel or consonant. 
