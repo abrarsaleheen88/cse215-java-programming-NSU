@@ -1,0 +1,62 @@
+// Online Java Compiler (Editor)
+// Write and run Java online using this editor.
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        System.out.println("Enter two char");
+        Scanner s= new Scanner(System.in);
+
+        String input = s.next();
+
+        
+        
+
+                char sub = input.charAt(0);
+                char year = input.charAt(1);
+
+                if (sub == 'M') {
+            System.out.println("Mathematics");
+        }
+        else if (sub == 'C') {
+            System.out.println("Computer Science");
+        }
+        else if (sub == 'I') {
+            System.out.println("Information Technology");
+        }
+        else {
+            System.out.println("Invalid major");
+        }
+
+        if (year == '1') {
+            System.out.println("Freshman");
+        }
+        else if (year == '2') {
+            System.out.println("Sophomore");
+        }
+        else if (year == '3') {
+            System.out.println("Junior");
+        }
+        else if (year == '4') {
+            System.out.println("Senior");
+        }
+        else {
+            System.out.println("Invalid status");
+        }
+                
+            
+
+        
+        
+    }
+}
+
+
+ (Student major and status) Write a program that prompts the user to enter two
+characters and displays the major and status represented in the characters. The first
+character indicates the major and the second is number character 1, 2, 3, 4, which
+indicates whether a student is a freshman, sophomore, junior, or senior. Suppose
+the following chracters are used to denote the majors:
+M: Mathematics
+C: Computer Science
+I: Information Technology
