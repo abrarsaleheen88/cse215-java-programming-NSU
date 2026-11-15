@@ -1,0 +1,47 @@
+.17 (Sort students) Write a program that prompts the user to enter the number of students,
+the students’ names, and their scores, and prints student names in decreasing order of their scores.
+
+
+// Online Java Compiler (Editor)
+// Write and run Java online using this editor.
+import java.util.Scanner;
+class Main 
+{
+    public static void main(String[] args) {
+
+        Scanner s = new Scanner(System.in);
+   String []name = new String[3];
+   int []score = new int[3];
+
+        for (int i=0;i<3;i++)
+            {
+                name[i]= s.next();
+                score[i]=s.nextInt();
+                
+            }
+        int high=score[0];
+        String highName = name[0];
+        
+        for (int i=0;i<3-1;i++)
+            {
+                for (int j=0;j<3-1-i;j++)
+                    {  if (score[j]<score[j+1])
+               {
+                   int temp= score[j];
+                   score[j]= score[j+1];
+                   score[j+1]=temp;
+
+                   String t = name[j];
+                   name[j]=name[j+1];
+                   name[j+1]=t;
+               }
+                    }
+                
+            }
+
+         for (int i = 0; i < 3; i++) {
+            System.out.println(name[i] + " " + score[i]);
+    }        
+   
+    }
+} 
