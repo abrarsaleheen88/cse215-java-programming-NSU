@@ -51,3 +51,50 @@ class Main {
         }
     }
 }
+
+// with methods
+// Online Java Compiler (Editor)
+// Write and run Java online using this editor.
+import java.util.Scanner;
+class Main 
+{
+    public static void main(String[] args)
+{
+    Scanner s = new Scanner(System.in);
+    int size = s.nextInt();
+    int [] arr = new int[size];
+
+    for (int i=0;i<size;i++)
+        {
+            arr[i] = s.nextInt();
+        }
+
+    boolean Sorted = isSorted(arr);
+
+      if (Sorted == true )
+      {System.out.println("Sorted");}
+       else
+      {
+          System.out.println("NO");
+      }
+    
+     
+} 
+
+    public static boolean isSorted (int arr[])
+    {
+        for (int i =0;i<arr.length-1;i++)
+            {
+                  if (arr[i]>arr[i+1])
+                  {
+                      return false;
+                  }
+                        
+            }
+
+                   return true;
+        
+    }
+}
+
+
