@@ -1,0 +1,60 @@
+
+
+package com.mycompany.javapractice;
+import java.util.Scanner;
+
+public class JavaPractice {
+
+    public static void main(String[] args) {
+       
+        Scanner s = new Scanner(System.in);
+        
+int highestScore = Integer.MIN_VALUE;
+int secondHighestScore = Integer.MIN_VALUE;
+
+String highestName = "";
+String secondHighestName = ""; 
+        
+       
+           System.out.print("Enter size = ");
+           int size = s.nextInt();
+            System.out.print("Enter numbers and namees = ");
+           for (int i=0;i<size;i++)
+           {
+           
+               int n = s.nextInt();
+               String name = s.next();
+               
+                       
+
+
+           for (int j =0;j<size;j++)
+           {
+                if (highestScore < n)
+                {
+                    highestScore = n;
+                    highestName = name;                                      
+                }
+                if (secondHighestScore < n && n< highestScore)
+                {
+                    secondHighestScore = n;
+                    secondHighestName = name;
+                    
+                }
+           
+           }
+           
+           
+           }
+           
+           
+           System.out.println("Higest score "+highestScore+" by "+highestName);
+            System.out.println("second Higest score "+secondHighestScore+" by "+secondHighestName);
+       
+    }
+}
+
+(Find the two highest scores) Write a program that prompts the user to enter the
+number of students and each student’s name and score, and finally displays the
+student with the highest score and the student with the second-highest score
+
